@@ -52,8 +52,10 @@ class SN_ScriptFunctionNode(bpy.types.Node, SN_ScriptingBaseNode):
         layout.prop(self, "function_name", text="")
     
     def set_outputs(self):
-        if len(self.outputs) == 1:
-            self.outputs[1 + i].python_value = f"return_{self.static_uid}"
+        print(len(self.outputs))
+        print(self.outputs)
+        if len(self.outputs) == 3:
+            self.outputs[1].python_value = f"return_{self.static_uid}"
         else:
             for i in range(len(self.outputs) - 2):
                 self.outputs[1 + i].python_value = f"return_{self.static_uid}[{i}]"
