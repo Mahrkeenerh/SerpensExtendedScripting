@@ -49,10 +49,14 @@ class SN_ScriptFunctionNodeKeyd(bpy.types.Node, SN_ScriptingBaseNode):
         update=update_function_name
     )
 
+    def self_eval(self, context):
+        self._evaluate(context)
+
     use_keyword_arguments: bpy.props.BoolProperty(
         name="Use Keyword Arguments",
         description="Use Keyword Arguments to call function, else positional arguments.",
-        default=True
+        default=True,
+        update=self_eval
     )
 
     def draw_node(self, context, layout):
