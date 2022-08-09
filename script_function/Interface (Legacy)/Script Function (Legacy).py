@@ -3,10 +3,10 @@ from ..base_node import SN_ScriptingBaseNode
 from ...utils import unique_collection_name, get_python_name
 
 
-class SN_ScriptFunctionNodeKeyd(bpy.types.Node, SN_ScriptingBaseNode):
+class SN_ScriptFunctionNode(bpy.types.Node, SN_ScriptingBaseNode):
 
-    bl_idname = "SN_ScriptFunctionNodeKeyd"
-    bl_label = "Script Function"
+    bl_idname = "SN_ScriptFunctionNode"
+    bl_label = "Script Function (Legacy)"
     node_color = "PROGRAM"
     bl_width_default = 200
 
@@ -32,9 +32,7 @@ class SN_ScriptFunctionNodeKeyd(bpy.types.Node, SN_ScriptingBaseNode):
     def on_create(self, context):
         self.add_execute_input()
         self.add_execute_output()
-        inp = self.add_dynamic_data_input("Arg")
-        inp.is_variable = True
-        inp.changeable = True
+        self.add_dynamic_data_input("Arg").is_variable = True
         out = self.add_dynamic_data_output("Out")
         out.is_variable = True
         out.changeable = True
@@ -44,23 +42,14 @@ class SN_ScriptFunctionNodeKeyd(bpy.types.Node, SN_ScriptingBaseNode):
         self._evaluate(context)
 
     function_name: bpy.props.StringProperty(
-        name="Name",
+        name="Function",
         description="Name of the function to run",
         update=update_function_name
     )
 
-    use_keyword_arguments: bpy.props.BoolProperty(
-        name="Use Keyword Arguments",
-        description="Use Keyword Arguments to call function, else positional arguments.",
-        default=True
-    )
-
     def draw_node(self, context, layout):
-        # layout.label(text="Function:")
-        # layout.prop(self, "function_name", text="")
-        row = layout.row(align=True)
-        row.prop(self, "function_name")
-        layout.prop(self, "use_keyword_arguments")
+        layout.label(text="Function:")
+        layout.prop(self, "function_name", text="")
     
     def set_outputs(self):
         if len(self.outputs) == 3:
@@ -70,10 +59,7 @@ class SN_ScriptFunctionNodeKeyd(bpy.types.Node, SN_ScriptingBaseNode):
                 self.outputs[1 + i].python_value = f"return_{self.static_uid}[{i}]"
 
     def evaluate(self, context):
-        if self.use_keyword_arguments:
-            args = ", ".join(f"{inp.name}={inp.python_value}" for inp in self.inputs[1:-1])
-        else:
-            args = ", ".join(f"{inp.python_value}" for inp in self.inputs[1:-1])
+        args = ", ".join(f"{inp.name}={inp.python_value}" for inp in self.inputs[1:-1])
         self.code = f"return_{self.static_uid} = {self.function_name}({args})"
         self.code += f"\n{self.outputs[0].python_value}"
         self.set_outputs()

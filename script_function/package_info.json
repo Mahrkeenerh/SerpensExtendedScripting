@@ -1,7 +1,7 @@
 {
     "name": "Script Function",
-    "description": "Single new node to run a script function, and return the result.",
+    "description": "Single new node to run a script function, and return the results.",
     "author": "Mahrkeenerh",
-    "version": "1.0.1",
-    "wiki": ""
+    "version": "1.1.0",
+    "wiki": "https://github.com/Mahrkeenerh/SerpensScriptFunction"
 }
