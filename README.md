@@ -2,6 +2,15 @@
 
 Serpens 3 package containing new scripting nodes.
 
+This package is free, but you can support me through: [paypal.me/mahrkeenerh](https://paypal.me/mahrkeenerh)
+
+
+| [Download](https://github.com/Mahrkeenerh/SerpensExtendedScripting/releases/latest/download/extended_scripting.zip) |
+|-|
+
+&nbsp;
+
+# Nodes:
 - [Script Function Node](#script-function)
 - [Expression Node](#expression)
 
