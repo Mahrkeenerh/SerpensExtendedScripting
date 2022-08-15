@@ -33,10 +33,10 @@ class SN_ScriptFunctionNodeKeyd(bpy.types.Node, SN_ScriptingBaseNode):
     def on_create(self, context):
         self.add_execute_input()
         self.add_execute_output()
-        inp = self.add_dynamic_data_input("arg")
+        inp = self.add_dynamic_data_input("Argument")
         inp.is_variable = True
         inp.changeable = True
-        out = self.add_dynamic_data_output("out")
+        out = self.add_dynamic_data_output("Output")
         out.is_variable = True
         out.changeable = True
 

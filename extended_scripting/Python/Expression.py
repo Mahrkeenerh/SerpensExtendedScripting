@@ -21,7 +21,7 @@ class SN_ExpressionNode(bpy.types.Node, SN_ScriptingBaseNode):
         self.add_execute_output()
         self.inputs[0].set_hide(True)
         self.outputs[0].set_hide(True)
-        self.add_dynamic_data_input("inp").changeable = True
+        self.add_dynamic_data_input("Input").changeable = True
         self.add_data_output("Expression").changeable = True
 
     def update_expression(self, context):
@@ -68,6 +68,9 @@ class SN_ExpressionNode(bpy.types.Node, SN_ScriptingBaseNode):
             expression = self.multiple_replace(self.expression, to_replace)
         else:
             expression = self.expression
+        
+        if not expression:
+            expression = None
 
         if self.require_execute:
             self.code = f"return_{self.static_uid} = {expression}"
