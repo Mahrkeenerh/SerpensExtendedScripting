@@ -1,6 +1,5 @@
 ![Blender](https://img.shields.io/badge/blender%203-%23F5792A.svg?style=for-the-badge&logo=blender&logoColor=white) ![Serpens 3](https://img.shields.io/badge/SERPENS%203-00eda9?style=for-the-badge&logo=blender&logoColor=white)
 
-&nbsp;
 
 
 # Extended Scripting
@@ -13,14 +12,13 @@ This package is free, but you can support me through: [paypal.me/mahrkeenerh](ht
 | [Donate](https://paypal.me/mahrkeenerh) | [Download](https://github.com/Mahrkeenerh/SerpensExtendedScripting/releases/latest/download/extended_scripting.zip) |
 | - | - |
 
-&nbsp;
+
 
 # Nodes:
 - [Script Function Node](#script-function)
 - [Expression Node](#expression)
 
 
-&nbsp;
 
 # Script Function Node
 
@@ -31,7 +29,6 @@ If `Use Keyword Arguments` is checked, the function uses keyword arguments, othe
 ![Default Script Function node](/docs_images/default_script_function.png)
 
 
-&nbsp;
 
 ## Initialization
 
@@ -48,7 +45,6 @@ def combine_strings(string1, string2):
 ```
 
 
-&nbsp;
 
 ## Executing Custom Function
 
@@ -58,14 +54,6 @@ def combine_strings(string1, string2):
 - `output` is the return value of function, can be **named anything**
 
 
-&nbsp;
-
-mismatched arguments:
-
-![Custom Function Call Mismatch Arguments](/docs_images/custom_function_mismatch.png)
-
-
-&nbsp;
 
 ## Executing Custom Function without Keyword Arguments
 
@@ -74,7 +62,6 @@ mismatched arguments:
 - `first` and `second` are the function paremeter inputs, but **naming doesn't have to match**, **position matters**
 
 
-&nbsp;
 
 ## Multiple Outputs
 
@@ -91,7 +78,6 @@ Multiple outputs can either be combined, or split into separate outputs.
 ![Multiple Outputs Separated](/docs_images/multiple_separated.png)
 
 
-&nbsp;
 
 # Expression Node
 
@@ -102,14 +88,12 @@ This node allows you to define a python expression, or execute the python expres
 ![Expression Require Execute](/docs_images/expression_require_execute.png)
 
 
-&nbsp;
 
 ## Altering inputs
 
 ![Expression to lower](/docs_images/expression_lower.png)
 
 
-&nbsp;
 
 ## Using libraries
 
@@ -120,7 +104,6 @@ In order to use other libraries that require to be imported, the `import` first 
 ![Expression math ceil](/docs_images/expression_ceil.png)
 
 
-&nbsp;
 
 ## Combining Expressions
 
