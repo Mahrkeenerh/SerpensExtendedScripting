@@ -1,3 +1,8 @@
+![Blender](https://img.shields.io/badge/blender%203-%23F5792A.svg?style=for-the-badge&logo=blender&logoColor=white) ![Serpens 3](https://img.shields.io/badge/SERPENS%203-00eda9?style=for-the-badge&logo=blender&logoColor=white)
+
+&nbsp;
+
+
 # Extended Scripting
 
 Serpens 3 package containing new scripting nodes.
@@ -16,7 +21,6 @@ This package is free, but you can support me through: [paypal.me/mahrkeenerh](ht
 
 
 &nbsp;
-
 
 # Script Function Node
 
@@ -52,6 +56,7 @@ def combine_strings(string1, string2):
 
 - `string1` and `string2` are the function parameter inputs, **naming must match**, **position doesn't have to match**
 - `output` is the return value of function, can be **named anything**
+
 
 &nbsp;
 
