@@ -2,7 +2,7 @@ import re
 
 import bpy
 from ..base_node import SN_ScriptingBaseNode
-from ...utils import unique_collection_name, get_python_name
+from ...utils import unique_collection_name
 
 
 class SN_ExpressionNode(bpy.types.Node, SN_ScriptingBaseNode):
@@ -71,6 +71,8 @@ class SN_ExpressionNode(bpy.types.Node, SN_ScriptingBaseNode):
         
         if not expression:
             expression = None
+        else:
+            expression = expression.replace('eval("', '').replace('")', '')
 
         if self.require_execute:
             self.code = f"return_{self.static_uid} = {expression}"
