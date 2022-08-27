@@ -1,7 +1,7 @@
 {
     "name": "Extended Scripting",
-    "description": "Extends the Serpens scripting capabilities with new nodes.",
+    "description": "Extends Serpens scripting capabilities with new nodes.",
     "author": "Mahrkeenerh",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "wiki": "https://github.com/Mahrkeenerh/SerpensExtendedScripting"
 }
