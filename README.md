@@ -17,7 +17,7 @@ This package is free, but you can support me through: [paypal.me/mahrkeenerh](ht
 # Nodes:
 - [Script Function Node](#script-function)
 - [Expression Node](#expression)
-
+- [Multi Execute](#multi-execute)
 
 
 # Script Function Node
@@ -110,3 +110,13 @@ In order to use other libraries that require to be imported, the `import` first 
 `Expression` nodes can be combined to improve readability.
 
 ![Combined Expressions](/docs_images/expressions_combined.png)
+
+
+
+# Multi Execute
+
+Very straight-forward node, allows combining multiple input and output `Execute` sockets together.
+
+Each of the connected inputs will execute **all** of the outputs.
+
+![Multi Execute Node](/docs_images/multi_execute.png)
