@@ -120,3 +120,13 @@ Very straight-forward node, allows combining multiple input and output `Execute`
 Each of the connected inputs will execute **all** of the outputs.
 
 ![Multi Execute Node](/docs_images/multi_execute.png)
+
+
+
+# Loop While
+
+Adds support for Python's `while loop`.
+
+Be careful, as this very well may crash your file, if you're not sure what you're doing.
+
+![Loop While Execute](/docs_images/loop_while.png)
