@@ -17,7 +17,9 @@ This package is free, but you can support me through: [paypal.me/mahrkeenerh](ht
 # Nodes:
 - [Script Function Node](#script-function)
 - [Expression Node](#expression)
+- [Try Except Node](#try-except)
 - [Multi Execute](#multi-execute)
+- [Loop While](#loop-while)
 
 
 # Script Function Node
@@ -110,6 +112,16 @@ In order to use other libraries that require to be imported, the `import` first 
 `Expression` nodes can be combined to improve readability.
 
 ![Combined Expressions](/docs_images/expressions_combined.png)
+
+
+
+# Try Except
+
+Adds support for Python's `try except` statement.
+
+`Print Errors` will print the error to the console, if an error occurs.
+
+![Try Except Node](/docs_images/try_except.png)
 
 
 
